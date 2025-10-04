@@ -1,8 +1,4 @@
 fastapi
 uvicorn[standard]
 langchain-google-genai
-langchain-core
-langchain-community
 python-dotenv
-pillow
-pytesseract
