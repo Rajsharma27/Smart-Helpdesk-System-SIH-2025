@@ -86,6 +86,7 @@ main_prompt = ChatPromptTemplate.from_messages([
         "subcategory": "string",
         "status": "Open",
         "source": "Chatbot",
+        "userId": "string",
         "tags": ["string"],
         "aiAnalysis": {{{{
             "sentiment": "positive/neutral/negative",
@@ -154,4 +155,5 @@ async def chat_endpoint(request: ChatRequest):
 @app.get("/")
 def root():
     return {"message": "Helpdesk AI (Gemini) Chat is running 🚀"}
+
 
