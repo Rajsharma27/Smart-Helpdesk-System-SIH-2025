@@ -2,7 +2,7 @@ from pathlib import Path
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_community.chat_message_histories import FileChatMessageHistory
-from .config import GOOGLE_API_KEY, CHAT_SESSIONS_DIR
+from config import GOOGLE_API_KEY, CHAT_SESSIONS_DIR
 
 # ----------------- LangChain LLM and Memory Setup -----------------
 llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0.1, google_api_key=GOOGLE_API_KEY)
@@ -62,3 +62,4 @@ main_prompt = ChatPromptTemplate.from_messages([
 
 # ----------------- LangChain Core Runnable Chain -----------------
 main_chain = main_prompt | llm
+
