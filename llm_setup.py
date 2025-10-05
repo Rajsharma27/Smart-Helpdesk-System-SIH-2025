@@ -52,7 +52,7 @@ main_prompt = ChatPromptTemplate.from_messages([
 
 **Important Notes:**
 * The `status` field in the `ticket` object should initially be set to "Open" when the ticket is created by the chatbot.
-* The `source` field should be set to "Chatbot and generate a userid and username also".
+* The `source` field should be set to "Chatbot and generate a mock userid and a realistic username also".
 * The `aiAnalysis` field provides sentiment analysis and keywords extracted from the user's input.
 """,
     ),
@@ -62,4 +62,5 @@ main_prompt = ChatPromptTemplate.from_messages([
 
 # ----------------- LangChain Core Runnable Chain -----------------
 main_chain = main_prompt | llm
+
 
