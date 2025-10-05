@@ -6,10 +6,10 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from langchain_core.messages import HumanMessage, AIMessage
 
-from . import config
-from .image_processing import process_image
-from .llm_setup import main_chain, get_session_history
-from .schemas import ChatRequest, ChatResponse
+import config
+from image_processing import process_image
+from llm_setup import main_chain, get_session_history
+from schemas import ChatRequest, ChatResponse
 
 
 # ----------------- FastAPI App Initialization -----------------
@@ -296,3 +296,4 @@ async def get_history(session_id: str):
 def root():
 
     return {"message": "Helpdesk AI (Gemini) Chat is running 🚀"}
+
